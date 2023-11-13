@@ -2,6 +2,7 @@ package com.example.practice_one.controller;
 
 import com.example.practice_one.model.CloudVendor;
 import com.example.practice_one.service.CloudVendorService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -10,11 +11,14 @@ import java.util.List;
 @RequestMapping("/cloudvendor")
 public class CloudVendorInfoController {
 
+    @Autowired
     CloudVendorService cloudVendorService;
 
-    public CloudVendorInfoController(CloudVendorService cloudVendorService){
-        this.cloudVendorService = cloudVendorService;
-    }
+    //public CloudVendorInfoController(CloudVendorService cloudVendorService){
+    //    this.cloudVendorService = cloudVendorService;
+    //}
+
+
 
     // getting specific data
     @GetMapping("{vendorId}")  // this is for getting/fetching the data
